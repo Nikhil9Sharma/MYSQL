@@ -6,4 +6,4 @@ SELECT DISTINCT Department FROM worker;
 -- AVG SALARY OR ALL EMPLOYEE BY EVERY DEPARTMENT
 SELECT department, AVG(salary) FROM worker GROUP BY department;
 -- MINIMUM SALARY 
-SELECT department, MIN(salary) FROM worker GROUP BY department;
+SELECT department, MIN(salary) FROM worker GROUP BY department HAVING Count(Department)>2;
