@@ -13,4 +13,5 @@ ALTER TABLE account MODIFY interest DOUBLE NOT NULL DEFAULT 0;
 -- RENAME THE COLUMNS ----------
 ALTER TABLE account CHANGE COLUMN interest saving_interest FLOAT NOT NULL DEFAULT 0;
 DESC ACCOUNT;
+ALTER TABLE account RENAME TO account_details;
    SELECT * FROM account;                 
