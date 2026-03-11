@@ -1,4 +1,5 @@
 USE MyDatabase;
+
 -- SELECT * FROM orders;
 -- SELECT *  FROM customers;
 -- Get the Data  using filtering using the WHERE ____
@@ -8,7 +9,7 @@ USE MyDatabase;
 FROM customers
 WHERE country = 'Germany';
 
-/* Retrieve all customer  and sort the results by the highest score first.*/
+-- Retrieve all customer and sort the results by the highest score first.
 
 SELECT
 	* 
@@ -22,7 +23,7 @@ ORDER BY score DESC;
 FROM customers 
 ORDER BY score DESC, country ASC;
 
-/* Agggrigate(Group By)(Addition, Collection, heap, etc.) using SUM() of Country score */
+-- Agggrigate(Group By)(Addition, Collection, heap, etc.) using SUM() of Country score 
 
 SELECT 
 	Country,
@@ -31,9 +32,9 @@ SELECT
 FROM customers 
 Group BY Country;
 
-/*Find the AVG score for each country 
-	considering only customers with a score not equal to 0
-		and return only those countries with an AVG score greater than 430*/
+-- Find the AVG score for each country 
+--	considering only customers with a score not equal to 0
+--		and return only those countries with an AVG score greater than 430
 
 SELECT
     country,
@@ -42,3 +43,9 @@ FROM customers
 WHERE score != 0
 Group BY country
 HAVING AVG(score)>430;
+
+-- LIMIT AND TOP IS SAME BUT TOP USE IN MICROSOFTSQL AND LIMIT USE IN MYSQL 
+-- LIMIT USE IN END OF THE SELECT STATEMENT
+-- TOP USE IN AFTER THE SELECT KEYWORD OR SELECT DISTINCT KEYWORD
+SELECT  * FROM orders
+ORDER BY order_date DESC LIMIT 3;
