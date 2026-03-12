@@ -5,7 +5,7 @@ INSERT INTO customers (id, first_name)
     (10, 'SARA');
 SELECT * FROM customers;
 */
---  INSERT DATA FROM 'CUSTOMER' INTO 'PERSONS'
+-- INSERT DATA FROM 'CUSTOMER' INTO 'PERSONS'
 /*
 INSERT INTO persons (id, persons_name, dob, phone)
 SELECT id, first_name, NULL, 'Unknown'
@@ -37,5 +37,5 @@ DELETE FROM customers
 WHERE ID > 5;
 
  */
- TRUNCATE TABLE persons;
+TRUNCATE TABLE persons;
 SELECT * FROM customers;
