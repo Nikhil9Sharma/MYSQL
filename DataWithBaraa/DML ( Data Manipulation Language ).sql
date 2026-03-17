@@ -26,7 +26,7 @@ UPDATE
 customers
  SET score = 0, country = 'UK' 
 	WHERE id = 10;
-
+-- -----------------------
  UPDATE customers
 SET score = 0
 WHERE score IS NULL AND id > 0;
