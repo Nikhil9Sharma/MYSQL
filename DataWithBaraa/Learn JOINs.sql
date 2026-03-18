@@ -72,7 +72,7 @@ FROM customers AS C
 LEFT JOIN orders AS o
 ON c.id = o.customer_id
 WHERE customer_id IS NULL;
-*/
+
 SELECT 
 	c.id,
     c.first_name,
@@ -83,3 +83,15 @@ FROM  orders AS o
 LEFT JOIN customers AS c 
 ON c.id = o.customer_id
 WHERE c.id IS NULL;
+*/
+SELECT 
+	c.id,
+    c.first_name,
+    c.country,
+    o.customer_id,
+    o.sales
+FROM customers AS c
+LEFT JOIN orders AS o
+ON c.id = o.customer_id
+WHERE o.customer_id IS NOT NULL;
+SELECT * FROM customers CROSS JOIN orders;
