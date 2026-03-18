@@ -62,7 +62,7 @@ UNION
 SELECT c.id, c.first_name, o.order_id, o.sales
 FROM orders AS o
 RIGHT JOIN customers AS c ON c.id = o.customer_id;
-*/
+
 SELECT 
  c.id,
     c.first_name,
@@ -72,4 +72,14 @@ FROM customers AS C
 LEFT JOIN orders AS o
 ON c.id = o.customer_id
 WHERE customer_id IS NULL;
-
+*/
+SELECT 
+	c.id,
+    c.first_name,
+    c.country,
+    o.customer_id,
+    o.sales
+FROM  orders AS o
+LEFT JOIN customers AS c 
+ON c.id = o.customer_id
+WHERE c.id IS NULL;
