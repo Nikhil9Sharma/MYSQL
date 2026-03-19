@@ -4,7 +4,7 @@ USE MyDatabase;
 -- SELECT *  FROM customers;
 -- Get the Data  using filtering using the WHERE ____
 
- SELECT
+SELECT
 	First_name,country
 FROM customers
 WHERE country = 'Germany';
@@ -12,27 +12,27 @@ WHERE country = 'Germany';
 -- Retrieve all customer and sort the results by the highest score first.
 
 SELECT
-	* 
-FROM customers 
+	*
+FROM customers
 ORDER BY score DESC;
 
 --  Retrieve all customer and sort the results by the highest country first
 
- SELECT
-	* 
-FROM customers 
+SELECT
+	*
+FROM customers
 ORDER BY score DESC, country ASC;
 
 -- Agggrigate(Group By)(Addition, Collection, heap, etc.) using SUM() of Country score 
 
-SELECT 
+SELECT
 	Country,
 	SUM(score) AS Total_score,
     count(id) AS Total_Country
-FROM customers 
+FROM customers
 Group BY Country;
 
--- Find the AVG score for each country 
+-- Find the AVG score for each country
 --	considering only customers with a score not equal to 0
 --		and return only those countries with an AVG score greater than 430
 
