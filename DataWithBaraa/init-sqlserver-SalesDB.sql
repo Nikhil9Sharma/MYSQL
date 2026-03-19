@@ -1,18 +1,3 @@
-/*
-=============================================================
-Database Creation and Table Setup Script
-=============================================================
-Script Purpose:
-    This script creates a new SQL Server database named 'SalesDB'. 
-    If the database already exists, it is dropped to ensure a clean setup. 
-    The script then creates three tables: 'customers', 'orders', and 'employees' 
-    with their respective schemas, and populates them with sample data.
-    
-WARNING:
-    Running this script will drop the entire 'SalesDB' database if it exists, 
-    permanently deleting all data within it. Proceed with caution and ensure you 
-    have proper backups before executing this script.
-*/
 
 
 -- Drop and recreate the 'SalesDB' database
@@ -35,7 +20,7 @@ CREATE TABLE Customers (
 );
 
 -- Insert data into Customer table
-INSERT INTO Customers 
+INSERT INTO Customers
 VALUES
     (1, 'Jossef', 'Goldberg', 'Germany', 350),
     (2, 'Kevin', 'Brown', 'USA', 900),
@@ -114,7 +99,7 @@ CREATE TABLE Orders (
 );
 
 -- Insert data into Orders table
-INSERT INTO Orders 
+INSERT INTO Orders
 VALUES
     (1,  101, 2, 3, '2025-01-01', '2025-01-05', 'Delivered','9833 Mt. Dias Blv.', '1226 Shoe St.',  1, 10, '2025-01-01T12:34:56'),
     (2,  102, 3, 3, '2025-01-05', '2025-01-10', 'Shipped','250 Race Court',NULL, 1, 15, '2025-01-05T23:22:04'),
@@ -148,7 +133,7 @@ CREATE TABLE OrdersArchive (
 );
 
 
-INSERT INTO OrdersArchive 
+INSERT INTO OrdersArchive
 VALUES
     (1, 101,2 , 3, '2024-04-01', '2024-04-05', 'Shipped','123 Main St', '456 Billing St', 1, 10, '2024-04-01T12:34:56'),
     (2, 102,3 , 3, '2024-04-05', '2024-04-10', 'Shipped','456 Elm St', '789 Billing St', 1, 15, '2024-04-05T23:22:04'),
