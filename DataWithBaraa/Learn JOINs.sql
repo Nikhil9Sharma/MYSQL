@@ -1,4 +1,5 @@
-USE mydatabase;
+-- USE mydatabase;
+USE salesdb;
 /*
 SELECT customers.id,
 		customers.first_name,
@@ -83,7 +84,7 @@ FROM  orders AS o
 LEFT JOIN customers AS c 
 ON c.id = o.customer_id
 WHERE c.id IS NULL;
-*/
+
 SELECT 
 	c.id,
     c.first_name,
@@ -95,3 +96,21 @@ LEFT JOIN orders AS o
 ON c.id = o.customer_id
 WHERE o.customer_id IS NOT NULL;
 SELECT * FROM customers CROSS JOIN orders;
+*/
+
+SELECT 
+	o.OrderID,
+    o.Sales,
+    c.FirstName AS Customers_First_Name,
+    c.LastName AS Customers_Last_Name,
+    p.product AS ProductName,
+    p.price,
+    e.FirstName AS Employees_First_Name,
+    e.LastName AS Employees_Last_Name
+FROM Salesdb.Orders AS o 
+LEFT JOIN Customers AS c 
+ON o.OrderID = c.CustomerID
+LEFT JOIN products AS p
+ON o.ProductID = p.ProductID
+LEFT JOIN employees AS e 
+ON o.SalesPersonID = e.EmployeeID;
