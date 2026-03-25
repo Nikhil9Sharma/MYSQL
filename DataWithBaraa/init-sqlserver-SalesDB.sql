@@ -6,9 +6,7 @@ DROP DATABASE IF EXISTS SaleDB;
 CREATE DATABASE SalesDB;
 USE SalesDB;
 
--- ======================================================
 -- Table: customers
--- ======================================================
 
 CREATE TABLE Customers (
     CustomerID INT NOT NULL,
@@ -28,10 +26,7 @@ VALUES
     (4, 'Mark', 'Schwarz', 'Germany', 500),
     (5, 'Anna', 'Adams', 'USA', NULL);
 
-
--- ======================================================
 -- Table: Employee
--- ======================================================
 
 -- Create Employee table
 CREATE TABLE Employees (

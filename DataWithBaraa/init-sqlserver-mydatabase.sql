@@ -1,6 +1,3 @@
-/*
-Database Creation and Table Setup Script for MySQL
-*/
 
 -- Drop and recreate database
 DROP DATABASE IF EXISTS MyDatabase;
@@ -9,9 +6,7 @@ CREATE DATABASE MyDatabase;
 -- Use the database
 USE MyDatabase;
 
--- ======================================================
 -- Table: customers
--- ======================================================
 
 DROP TABLE IF EXISTS customers;
 
@@ -31,9 +26,7 @@ INSERT INTO customers (id, first_name, country, score) VALUES
 (4, 'Martin', 'Germany', 500),
 (5, 'Peter', 'USA', 0);
 
--- ======================================================
 -- Table: orders
--- ======================================================
 
 DROP TABLE IF EXISTS orders;
 
