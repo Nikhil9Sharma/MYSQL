@@ -11,6 +11,7 @@ UNION
  FROM employees AS e);
 
 
+Use mydatabase;
 
 
 
