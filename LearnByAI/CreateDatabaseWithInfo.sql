@@ -1,0 +1,17 @@
+CREATE DATABASE IF NOT EXISTS college ;
+USE college;
+CREATE TABLE IF NOT EXISTS Students
+(
+SudentID INT NOT NULL PRIMARY KEY,
+EmpName VARCHAR(50),
+Age date,
+Course VARCHAR(50),
+City VARCHAR(30)
+);
+CREATE TABLE IF NOT EXISTS Employees(
+	EmpID INT PRIMARY KEY,
+    EmpName VARCHAR(50) NOT NULL,
+    Salary INT(10),
+    Department VARCHAR(20) NOT NULL,
+    JoinDate DATE
+);
